@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+:root{
+  --primary: #efb6b2;
+  --secondary: #4e4e4e;
+  --error: #ff4a4a;
+}
+
+/* base styles & title */
+body{
+  font-family: "Noto Serif";
+  color: var(--secondary);
+}
+.App{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.title h1{
+  color: var(--primary);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+.title h2, .title p{
+  text-align: center;
+}
+.title h2{
+  margin-top: 60px;
+  font-size: 2.6rem;
+}
+.title h3{
+  text-align:center;
+} 
+/* upload form styles */
+input{
+  display: block;
+  margin: 0 auto;
+}
+.output{
+  margin-top: 10px;
+  text-align: center;
+  height: 60px;
+  font-size: 0.8rem;
+}
+.error{
+  color: var(--error);
+}
+
+/* progress bar styles */
+.progress-bar{
+  height: 5px;
+  background: var(--primary);
+  margin-top: 20px;
+  
+}
+/* image grid styles */
+.img-grid{
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+}
+.img-wrap{
+  overflow: hidden;
+  height: 0;
+  padding: 50% 0;
+  position: relative;
+  opacity: 1;
+}
+.img-wrap img{
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.img-wrap .close {
+  width: fit-content;
+  position: absolute;
+  font-size: 20px;
+  padding: 0 5px;
+  top: 5px;
+  right: 5px;
+  z-index: 2;
+  color: white;
+  background-color: rgba(128,128,128 ,0.5 );
+ 
+  transition: ease-in-out 1s;
+}
+.img-wrap .close:hover {
+  transform: rotate(180deg);
+  transform-origin: center;
+  cursor: pointer;
+}
+
+
+/* modal styles */
+.backdrop{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.backdrop img{
+  display: block;
+  max-width: 60%;
+  max-height: 80%;
+  margin: 60px auto;
+  box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
+  border: 3px solid white;
+}
+.Form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px auto;
+  width: 400px;
+  border-radius: 2px;
+  padding: 20px;
+}
+.Form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.Form button {
+  border: none;
+  font-family: 'Times New Roman', Times, serif;
+  display: block;
+  margin: 20px auto;
+  width: 50%;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 3px;
+  outline: none;
+  color: #051e3e ;
+  background-color: #ead5dc ;
+}
+.Form input{
+  margin: 20px auto; 
+  width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid gray;
+}
+.Form button:hover {
+  transform: scale(1.1);
+}
+.Form button:active {
+  transform: scale(0.99);
+}
+.invalid-feedback{
+  color: red;
+  text-align: center;
+  font-size: 13px;
+}
+.registerText{
+  text-align: right;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 60px;
+}
+.registerText:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
